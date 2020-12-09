@@ -1,0 +1,10 @@
+D:\c_sharp\NNTP2\NNTP2\bin\Debug\NNTP2.exe.config
+D:\c_sharp\NNTP2\NNTP2\bin\Debug\NNTP2.exe
+D:\c_sharp\NNTP2\NNTP2\bin\Debug\NNTP2.pdb
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.csprojAssemblyReference.cache
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.Form1.resources
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.Properties.Resources.resources
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.csproj.GenerateResource.cache
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.csproj.CoreCompileInputs.cache
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.exe
+D:\c_sharp\NNTP2\NNTP2\obj\Debug\NNTP2.pdb
