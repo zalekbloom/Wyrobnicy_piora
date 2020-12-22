@@ -996,6 +996,13 @@ namespace Wyrobnicy_piora
 
                             string new_text1 = "";
                             string new_text2 = "";
+
+                            byte[] Base64;
+
+                            string UTF_string = "";
+
+                            string proper_email = "";
+
                             if  (fields[2].StartsWith("=?UTF-8?Q?") == true)
                             {
                                 new_text1 = fields[2].Replace("=C5=82", "l");
@@ -1011,8 +1018,26 @@ namespace Wyrobnicy_piora
                                 new_text1 = new_text2.Replace("?", "");
                                 fields[2] = new_text1.Replace("=", "");
 
-                            }  
-                             
+                            }
+                            if ((fields[2].ToUpper()).StartsWith("=?UTF-8?B?") == true)
+                            {
+                                int i1 = fields[2].IndexOf("<");
+                                int i2 = fields[2].IndexOf(">");
+                                proper_email = fields[2].Substring(i1, i2 - i1 + 1);
+
+                                new_text1 = fields[2].Substring(9, fields[2].Length - 10);
+                                new_text2 = new_text1.Replace("?", "");
+                                i1 = new_text2.IndexOf("= <");
+                                new_text1 = new_text2.Substring(0, i1);
+
+                                Base64  = Convert.FromBase64String(new_text1);
+
+                                UTF_string = Encoding.UTF8.GetString(Base64, 0, Base64.Length);
+
+                                fields[2] = UTF_string + " " + proper_email;
+                            }
+
+
 
                             all_posts.Add(fields[2]);
                         }
